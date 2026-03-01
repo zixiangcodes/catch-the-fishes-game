@@ -15,8 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const instructionsButton = document.getElementById('instructionsButton');
     const instructionsPopup = document.getElementById('instructionsPopup');
     const closeInstructionsButton = document.getElementById('closeInstructionsButton');
+    const breakdownTab = document.getElementById('breakdownTab');
     const breakdownTabButton = document.getElementById('breakdownTabButton');
     const closeBreakdownButton = document.getElementById('closeBreakdownTabButton');
+    const closeBreakdownX = document.getElementById('closeBreakdownButton');
+    const closeInstructionsX = document.getElementById('closeInstructionsX');
 
     // Event Listeners
     startButton.addEventListener('click', startGame);
@@ -39,6 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
     closeBreakdownButton.addEventListener('click', function () {
         breakdownTab.style.display = 'none'; // Hide breakdown tab
     });
+    closeBreakdownX.addEventListener('click', function () {
+        breakdownTab.style.display = 'none'; // Hide breakdown tab (X button)
+    });
 
     instructionsButton.addEventListener('click', function () {
         // Play game reset sound
@@ -49,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     closeInstructionsButton.addEventListener('click', function () {
         instructionsPopup.style.display = 'none'; // Hide instructions popup
+    });
+    closeInstructionsX.addEventListener('click', function () {
+        instructionsPopup.style.display = 'none'; // Hide instructions popup (X button)
     });
 
     const objects = document.querySelectorAll('.circle img');
