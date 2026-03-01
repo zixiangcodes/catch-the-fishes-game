@@ -9,6 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
     let starfishCount = 0;
     let jellyfishCount = 0;
 
+    function playSfx(audioId) {
+        const base = document.getElementById(audioId);
+        if (!base) return;
+
+        // Use a fresh Audio instance so repeated clicks can overlap
+        const src = base.currentSrc || base.src;
+        if (!src) return;
+
+        const sfx = new Audio(src);
+        sfx.volume = base.volume;
+        sfx.playbackRate = base.playbackRate;
+        sfx.play().catch(() => {});
+    }
+
     // Get references to various buttons and elements on the page
     const startButton = document.getElementById('startButton');
     const resetButton = document.getElementById('stopButton');
@@ -34,8 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Some functions that need refactoring (start)
     breakdownTabButton.addEventListener('click', function () {
         // Play game reset sound
-        const gameResetSound = document.getElementById('gameReset');
-        gameResetSound.play();
+        playSfx('gameReset');
         breakdownTab.style.display = 'block'; // Show breakdown tab
     });
 
@@ -48,8 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     instructionsButton.addEventListener('click', function () {
         // Play game reset sound
-        const gameResetSound = document.getElementById('gameReset');
-        gameResetSound.play();
+        playSfx('gameReset');
         instructionsPopup.style.display = 'block'; // Show instructions popup
     });
 
@@ -174,8 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const isOpen = clickedObject.src.includes('Open');
         if (isOpen) {
             // Play fish open sound
-            const fishOpenSound = document.getElementById('fishOpen');
-            fishOpenSound.play();
+            playSfx('fishOpen');
 
             // Increment score
             score++;
@@ -191,8 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
             clickedObject.removeEventListener('click', handleFishClick);
         } else {
             // Play fish close sound
-            const fishCloseSound = document.getElementById('fishClose');
-            fishCloseSound.play();
+            playSfx('fishClose');
         }
 
         // Update score breakdown
@@ -204,8 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const clickedObject = event.target;
 
         // Play jellyfish sound
-        const jellyfishSound = document.getElementById('jellyfishZap');
-        jellyfishSound.play();
+        playSfx('jellyfishZap');
 
         // Decrease score by 3 points
         score -= 3;
@@ -228,8 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const clickedObject = event.target;
 
         // Play starfish sound
-        const starfishSound = document.getElementById('starfishYay');
-        starfishSound.play();
+        playSfx('starfishYay');
 
         // Increase score by 3 points
         score += 3;
@@ -332,8 +340,7 @@ document.addEventListener('DOMContentLoaded', function () {
         backgroundMusic.currentTime = 0;
 
         // Play game reset sound
-        const gameResetSound = document.getElementById('gameReset');
-        gameResetSound.play();
+        playSfx('gameReset');
 
         // Hide game over message
         const gameOverMessage = document.getElementById('gameEndedMessage');
