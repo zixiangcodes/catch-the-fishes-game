@@ -67,9 +67,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function resetImages() {
         const objects = document.querySelectorAll('.circle img');
-        objects.forEach(function (object, index) {
-            object.src = `images/fish${index % 6 + 1}_close.png`; // Assuming you have 6 different fish images
-            object.classList.remove('clicked'); // Remove the 'clicked' class if it was added during gameplay
+        objects.forEach(function (object) {
+            object.classList.remove('clicked');
+            // Remove game click handlers so the grid is non-interactive until Start Game
+            object.removeEventListener('click', handleFishClick);
+            object.removeEventListener('click', handleJellyfishClick);
+            object.removeEventListener('click', handleStarfishClick);
+            // Use same random mix as during gameplay so fishes look random after reset/end
+            const r = Math.random();
+            if (r < 0.6) {
+                const isOpen = Math.random() < 0.5;
+                const randomFish = Math.floor(Math.random() * 6) + 1;
+                object.src = `images/fish${randomFish}_${isOpen ? 'Open' : 'Close'}.png`;
+            } else if (r < 0.98) {
+                object.src = 'images/jellyfish.png';
+            } else {
+                object.src = 'images/starfish.png';
+            }
         });
     }
 
