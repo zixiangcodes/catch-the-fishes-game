@@ -1,0 +1,135 @@
+/* +++++++++++++ */
+/* GLOBAL STYLES */
+/* +++++++++++++ */
+
+/* Words, Title and Fonts */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    /* Needed to center the title "Catch the Fishes"   */
+}
+
+/* Background */
+body {
+    background-color: #1e6091;
+    /*  if background image fails  */
+    
+    background-image: url('images/ocean.gif');
+    /* Specify background Image   */
+
+/*    margin: 0;
+    padding: 0;*/
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* For background Adjustments   */
+/*    position: absolute;*/
+
+    /*  Note:
+    The "background-attachment" property is used to control the behavior of a background image in relation to the viewport.
+    When you set the background-attachment property to fixed, the background image is fixed in place relative to the viewport. 
+    So, it does not move when you scroll the page. This creates a parallax scrolling effect, where the content scrolls over the background image. 
+    */
+
+/*    display: flex;*/
+/*    justify-content: center; */
+    /* Aligns the container horizontally */
+/*    align-items: center; */
+    /* Aligns the container vertically */
+    height: 100vh; 
+    /* Ensures the body covers the entire viewport height */
+
+    margin: 0; 
+    /* Removes default body margin */
+
+    margin-right: 14px;
+    /* Adjust page margin, especially in relation to fish-container */
+
+}
+
+/* Header styles */
+header {
+    margin-top: 20px;
+}
+
+
+
+/* Button styles */
+button {
+    background-color: #59a3e6;
+    color: #ffffff;
+    border: 2.5px solid transparent;
+    padding: 8px 14px;
+    margin: 3.5px auto;
+    cursor: pointer;
+    border-radius: 3.5px;
+    transition: border-color 0.3s;
+}
+
+button:hover {
+    border-color: #800080;
+}
+
+/* Adjustments for button sizes */
+button, #startButton, #stopButton, #instructionsButton, #breakdownTabButton {
+    font-size: 16px;
+}
+
+/* Styles for the pop-up instructions screen */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    color: black;
+}
+
+.popup-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+
+    padding: 14px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: justify;
+
+/*    margin-left: 1px;
+    margin-right: 55px;*/
+
+    max-width: 30%;
+    max-height: 70%;
+
+    overflow: auto;
+    /* Allows scrolling   */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+#closeInstructionsButton {
+    font-size: 16px;
+}
+
+/* Styles for score breakdown images */
+.breakdown-image {
+    width: 90px;
+    height: 90px;
+    vertical-align: middle;
+    margin-right: 1px;
+}

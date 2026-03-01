@@ -1,0 +1,178 @@
+/* Global styles */
+body {
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    background-color: #1e6091;
+    /* Slightly darker shade of blue */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    color: #ffffff;
+    /* White text color */
+    text-align: center;
+    /* Center align text */
+}
+
+/* Header styles */
+header {
+    padding: 0px;
+    margin-top: 62px;
+}
+
+/* Button styles */
+button {
+    background-color: #59a3e6;
+    /* Bright blue button color */
+    color: #ffffff;
+    /* White text color */
+    border: 3px solid transparent;
+    /* Transparent border */
+    padding: 10px 20px;
+    margin: 10px auto;
+    /* Center buttons horizontally */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    /* Smooth transition for border color */
+}
+
+button:hover {
+    border-color: #800080;
+    /* Purple border on hover */
+}
+
+#startButton,
+#stopButton,
+#instructionsButton {
+    font-size: 20px;
+}
+
+/* Score and timer styles */
+#details,
+#score,
+#timer {
+    font-size: 20px;
+}
+
+/* Game ended message styles */
+#gameEndedMessage {
+    font-size: 20px;
+    color: greenyellow;
+}
+
+/* Grid container styles */
+#fishContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 columns */
+    grid-auto-rows: minmax(5px, auto);
+    /* Minimum height for rows */
+    gap: 5px;
+    /* Reduced gap between rows */
+    grid-column-gap: 5px;
+    /* Reduced gap between columns */
+    justify-content: center;
+    align-content: center;
+    /* Center content vertically */
+    padding: 0px;
+    margin: 0 auto;
+    /* Center the columns horizontally */
+}
+
+/* Circle styles */
+.circle {
+    width: 110px;
+    /* Circle size */
+    height: 110px;
+    /* Circle size */
+    border-radius: 60%;
+    background-color: #f0f0f0;
+    /* Light gray background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid transparent;
+    /* Transparent border */
+    transition: border-color 0.3s;
+    /* Smooth transition for border color */
+}
+
+/* Ensure circles fit within the grid */
+.circle img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Highlight circle on hover */
+.circle:hover {
+    border-color: #800080;
+    /* Purple border on hover */
+    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctext x="0" y="20" font-family="Arial" font-size="20"%3E🎣%3C/text%3E%3C/svg%3E'), auto;
+}
+
+/* Red border for closed mouth fish */
+.circle.closed-mouth {
+    border-color: #ff0000;
+    /* Red border */
+}
+
+/* Green border for opened mouth fish */
+.circle.open-mouth {
+    border-color: #00ff00;
+    /* Green border */
+}
+
+/* Grayed-out styling for clicked fish images */
+.clicked {
+    filter: grayscale(100%);
+    /* Gray out the image */
+    pointer-events: none;
+    /* Disable pointer events to prevent further interaction */
+}
+
+/* Styles for the pop-up instructions screen */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    color: black;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+#closeInstructionsButton {
+    font-size: 20px;
+}

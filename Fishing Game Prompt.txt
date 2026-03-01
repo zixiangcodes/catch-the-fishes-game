@@ -1,0 +1,105 @@
+## Prompt 1
+Hey there! I'm a new programmer. I've got this exciting idea to create a fishing game for kids.
+
+Using HTML, CSS and JS should suffice to make this game. Additionally, I want you to make the code easy to understand, even for non-coders. Remember to add code comments above each rule and line for the HTML, CSS and JS codes.
+
+This is the basis of the game:
+- There is a pond with fish inside, where each fish is in their own small circles.
+- There are 6 types of fishes with different colours. 
+- Each fish has two images or positions, one with their mouths closed, and another with their mouths opened.
+- An image whether its the fishes with the mouths closed, or the fishes with the mouths opened, appear for only 4 seconds in each small circle, chosen at random from the total of 12 images, where 6 images are fishes with the mouths closed and fishes with the mouths opened.
+- After 4 seconds has passed, the images are then randomized again.
+- Players can only successfully catch fish by pressing on the images of the fishes with their mouths opened, and this triggers a sound.
+- If players press on the fishes with their mouths closed, they can't catch the fish, which also triggers a sound.
+- Each successful fish catch increases the score count by 1.
+- Additionally, a timer is displayed and has a limit of 30 seconds.
+- Players must catch as many fish within those 30 seconds.
+- Once the 30 second timer finishes, a message appears saying the game has finished!
+- Different messages and music plays when players catch different number of fish at: 0, between 0-20, between 20-40 and finally, above 40 fishes.
+
+Firstly, for the HTML code, the game must have:
+- A header with the game title.
+- A smaller credits header, made by me the game creator, Zack.
+- A start button, which triggers a sound when pressed.
+- A stop button, that stops the game and resets the score, which triggers a sound when pressed.
+- The score of the current ongoing game when the game is started.
+- A timer that starts at 30 seconds when the game is started, showing how long players have remaining to catch the fishes.
+- A game ended message appears when the timer has finished.
+- Background music that plays when the game starts, and stops when the game ends.
+
+Additionally, the HTML code references style.css and script.js
+
+Adding on, the HTML code references sound files from the "sounds" folder and image files from the "image" folders.
+
+Please generate the necessary HTML code for this first. Please add comments to the code to help me understand the logic.
+
+
+## Prompt 2
+Next, your task is to redesign the page using CSS, so the page has good design style!
+
+Some required features include:
+- Nice purple header design.
+- The page looks bright with a bright blue theme with background gradients.
+- Give complementary shades for the game buttons and circles.
+- The start and reset buttons are rectangle.
+- When players hover on the start and reset buttons, white border appears around the button.
+- Place the circles on a grid and center each image inside its circle.
+- When players hover over the images, the circle around the image becomes highlighted.
+- When players click on the fishes with the closed mouths, a red border appears around the circle of the image.
+- When players click on the fishes with the opened mouths, a green border appears around the circle of the image.
+
+Limitations:
+- The screen and images must be responsive and suitable for mobile device screen sizes.
+
+Please add comments to the code to help me understand the logic.
+
+Below is the [code page] with its code for reference between the hashes.
+
+
+## Prompt 3
+Next, your task is to update the HTML code to have 25 circles for the fishes.
+
+Below is the current HTML code for your reference
+[Add code below..]
+
+Note: A lot of editing needed.
+
+## Prompt 4
+
+Okay, great so far!
+Next, time to do the Javascript code and interactivity.
+
+What needs to be done for each component.
+
+1. Start Game Button
+When players press the start game button, after 2 seconds, it will cause a sound wav file (music_background.wav) to play on loop and will cause the timer to start from 30 seconds to countdown to 0 seconds. 
+
+2. Playing The Game
+During the countdown from 30 seconds to 0 seconds:
+- The fish images will change to random images (after intervals of 4 seconds) before the images are randomized again, from a list of 12 fish images which are:
+>  Fish1_Close.png
+>  Fish1_Open.png
+>  Fish2_Close.png
+>  Fish2_Open.png
+>  Fish3_Close.png
+>  Fish3_Open.png
+>  Fish4_Close.png
+>  Fish4_Open.png
+>  Fish5_Close.png
+>  Fish5_Open.png
+>  Fish6_Close.png
+>  Fish6_Open.png
+- When players press any image that has the file names "Fish1_Open.png","Fish2_Open.png","Fish3_Open.png","Fish4_Open.png","Fish5_Open.png" or "Fish6_Open.png", a sound wav file (fish_open.wav) is played and the score increases by 1 point.
+- When players press any image ending has the file names "Fish1_Close.png", "Fish2_Close.png","Fish3_Close.png","Fish4_Close.png","Fish5_Close.png" or "Fish6_Close.png", a sound wav file (fish_close.wav) is played and but the score doesn't increase by 1.
+- Once the timer reaches 0, a message will display to tell players that the game is over and this will stop the sound wav file (music_background.wav) from playing and stop the loop.
+- Then, another sound wav (game_finish.wav) file is played.
+
+3. Game Ends
+Then depending on the score obtained by the player, there will be different messages displayed and different sound wav files triggered.
+- If a player gets a score of 0-9, the music_bad.wav plays and a message is displayed that says "Oh no, try again!"
+- If a player gets a score of 10-20, the music_okay.wav plays and a message is displayed that says "Getting better!!"
+- If a player gets a score of 21-40, the music_good.wav plays and a message is displayed that says "You're soo good now!!"
+- If a player gets a score of 41 and above, the music_best.wav plays and a message is displayed that says "YOU'RE TOO AMAZING!! THANKS FOR PLAYING!!"
+
+4.  Reset Game button
+When a player presses the "Reset Game" button, all previous sounds and musics are stopped, even the one on loop. Next, a sound wav (game_reset.wav) file is played, the end game and game over messages are removed, before the page is refreshed.

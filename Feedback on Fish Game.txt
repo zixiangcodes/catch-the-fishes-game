@@ -1,0 +1,26 @@
+----
+Issue / Idea: 
+- Name issue.
+
+Solution:
+- Change to "Catch the Fishes!"
+----
+Issue / Idea: 
+- Create Display Score that shows number of fishes caught.
+- Example: Jellyfish, starfish, normal fishes etc.
+
+Solution:
+- To do
+----
+Issue / Idea: 
+- On big screens the fish stretch from edge to edge, which makes it a bit harder to catch and see what fish we are choosing.
+
+Solution:
+- Putting this into box like container and centering it will help.
+- Might need margins / paddings for sides.
+----
+Issue / Idea:
+- Volume of some SFXs are too loud.
+
+Solution:
+- Create audio controls.

@@ -1,0 +1,79 @@
+#-#-#-#-#
+
+List of Images: (13 images)
+- Fish1_Close.png
+- Fish1_Open.png
+- Fish2_Close.png
+- Fish2_Open.png
+- Fish3_Close.png
+- Fish3_Open.png
+- Fish4_Close.png
+- Fish4_Open.png
+- Fish5_Close.png
+- Fish5_Open.png
+- Fish6_Close.png
+- Fish6_Open.png
+
+Image Links:
+https://depositphotos.com/serie/137816804.html
+
+- Sea.png
+- Fishing_Rod.png
+- Jellyfish.png
+- Starfish.png
+(Randomly found on the internet)
+
+Gif Background:
+- Natur Wasser GIF
+https://tenor.com/view/natur-wasser-deep-tief-anime-gif-26200173
+
+#-#-#-#-#
+
+List of Sound / Music Effects: (10 effects)
+- music_background.wav (must loop after 3 seconds) 
+=> Happy Music - https://freesound.org/people/MaoDin204/sounds/731179/
+
+- music_bad.wav 	( 0-9 fishes )
+=> Victory MIDI - https://freesound.org/people/Kleber_KGF/sounds/536190/
+
+- music_okay.wav 	( 10-20 fishes )
+=> Game End - from the FaceBomp Game
+
+- music_good.wav 	( 41 and above fishes )
+=> Game End High 	- WinFantasia - https://pixabay.com/sound-effects/search/yay/
+					- Old: from the FaceBomp Game 
+
+- music_best .wav	( 21-40 fishes )
+=> victory.Wav - https://freesound.org/people/honeybone82/sounds/513253/
+
+---
+WinFantasia
+Pixabay
+
+- game_start.wav
+=> Windows 95 Startup Jingle - https://www.winhistory.de/more/winstart/down/o95.wav
+
+- game_finish.wav
+=> Windows Pre-95 Shutdown Jingle - https://www.winhistory.de/more/winstart/down/owfw311.wav
+
+- game_reset.wav
+=> Apple Milestone Jingle: https://www.youtube.com/watch?v=9zNVI-xA0gg
+=> Old: Win 31 Shutdown Jingle.wav https://www.winhistory.de/more/winstart/down/win31.wav
+
+- fish_open.wav
+=> Woo Hoo - https://freesound.org/people/Rocotilos/sounds/341488/
+
+- fish_close.wav
+=> Wuh wuh wuh - https://freesound.org/people/nomiqbomi/sounds/578796/
+
+- starfish_yay.wav
+=> yay - https://pixabay.com/sound-effects/search/yay/
+       - https://freesound.org/people/zut50/sounds/162395/ (old)
+
+- jellyfish_zap.wav
+=> JacobsLadderSingle1.flac https://freesound.org/people/Halleck/sounds/19486/
+
+Reference:
+https://www.winhistory.de/more/winstart/winstart_en.htm
+
+#-#-#-#-#

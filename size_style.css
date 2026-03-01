@@ -1,0 +1,112 @@
+/* +++++++++++++ */
+/* FOR ADJUSTING SIZE OF GENERAL CSS STUFF ON DIFFERENT SCREEN SIZES */
+/* +++++++++++++ */
+
+/* 
+1000 
+600
+400
+*/
+
+/* Media query for mobile devices */
+@media (max-width: 1000px) {
+
+    body {
+
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .breakdown-image {
+/*        width: 80%;
+        height: 80%;*/
+    }
+
+    /* Adjust font sizes for smaller screens */
+    button, #startButton, #stopButton, #instructionsButton, #breakdownTabButton {
+/*        font-size: 13px;*/
+    }
+
+    /* Adjust button size */
+    button {
+    }
+
+    .popup-content {
+        font-size: 15px;
+        max-width: 50%;
+        max-height: 70%;
+    }
+
+}
+
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 660px) {
+
+    body {
+
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .breakdown-image {
+        width: 42%;
+        height: 42%;
+    }
+
+    /* Adjust font sizes for words on buttons */
+    button, #startButton, #stopButton, #instructionsButton, #breakdownTabButton {
+        font-size: 13px;
+    }
+
+    /* Adjust button size */
+    button {
+    }
+
+    .popup-content {
+        font-size: 13.5px;
+        max-width: 70%;
+        max-height: 70%;
+    }
+
+}
+
+/* Media query for mobile devices */
+@media (max-width: 429px) {
+
+    body {
+
+    }
+
+    h1 {
+        font-size: 20px;
+
+    }
+
+    .breakdown-image {
+        width: 35%;
+        height: 35%;
+    }
+    
+    /* Adjust font sizes for smaller screens */
+    button, #startButton, #stopButton, #instructionsButton, #breakdownTabButton {
+        font-size: 12.5px;
+    }
+
+    /* Adjust button size */
+    button {
+    }
+
+    .popup-content {
+        font-size: 12px;
+        margin-left: 1px;
+        margin-right: 55px;
+    }
+
+}

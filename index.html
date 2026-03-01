@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/fishingrod_favicon.png">
+    <!-- Tile -->
+    <title>🐠 Catch the Fishes! 🐟</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="size_style.css">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="size_game.css">
+</head>
+
+<body>
+    <header>
+        <h1> 🐠 Catch the Fishes! 🐟</h1>
+    </header>
+
+    <div id="buttons">
+        <button id="startButton">Start Game</button>
+        <button id="stopButton">Reset Game</button>
+        <button id="instructionsButton">Instructions</button>
+        <button id="breakdownTabButton">Score Breakdown</button>
+    </div>
+
+    <div id="details">
+
+        <p>Score: <span id="score">0</span></p>
+        <p id="timer">Time: 40</p>
+        <p id="gameEndedMessage" class="hidden" style="display: none;">Game Over!</p>
+
+        <div id="breakdownTab" class="popup hidden">
+            <div class="popup-content">
+                <span id="closeBreakdownButton" class="close">&times;</span>
+                <h2>Score Breakdown</h2>
+                <p>
+                    <img src="images/fish4_open.png" alt="Fish" class="breakdown-image"> Caught: <span id="fish1Count">0</span><br>
+                    <img src="images/starfish.png" alt="Starfish" class="breakdown-image"> Caught: <span id="starfishCount">0</span><br>
+                    <img src="images/jellyfish.png" alt="Jellyfish" class="breakdown-image"> Caught: <span id="jellyfishCount">0</span><br>
+                </p>
+                <hr>
+                <button id="closeBreakdownTabButton">Return</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="instructionsPopup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Instructions</h2>
+            <p>
+                - This game is mainly for kids to play.
+                <br><br>
+                - To win this game, get the highest score!
+                <br><br>
+                * Click on any fish with an open mouth or a starfish.<br>
+                * You have 40 seconds for each time you start the game.<br>
+                * The fishes will change every 4 seconds. So, you must click as many fishes within those 4 seconds!<br>
+                * Each 🐠 fish with an open mouth you click, gives you 1 point! 😜 <br>
+                * Each 🐟 fish with a closed mouth you click, gives no point! 😓 <br>
+                * The ⭐ starfish gives you 3 points! 🤩 <br>
+                * The 🐙 jellyfish takes away 3 points! 😭 <br>
+                * You get 🎶 special winning jingles when you get either 1-9, 10-19, 20-29 or more than 30 points! 
+                <br><br>
+                - THANK YOU FOR PLAYING!
+                <br><br>
+                - Made by Zack (V5.0 - Last Update: 11 July 2024).
+            <hr>
+            </p>
+            <button id="closeInstructionsButton">Return</button>
+        </div>
+    </div>
+
+    <audio id="musicBackground"     src="sounds/music_background.wav"></audio>
+    <audio id="musicBad"            src="sounds/music_bad.wav"></audio>
+    <audio id="musicOkay"           src="sounds/music_okay.wav"></audio>
+    <audio id="musicGood"           src="sounds/music_good.wav"></audio>
+    <audio id="musicBest"           src="sounds/music_best.wav"></audio>
+
+    <audio id="gameStart"           src="sounds/game_start.wav"></audio>
+    <audio id="gameFinish"          src="sounds/game_finish.wav"></audio>
+    <audio id="gameReset"           src="sounds/game_reset.wav"></audio>
+
+    <audio id="fishOpen"            src="sounds/fish_open.wav"></audio>
+    <audio id="fishClose"           src="sounds/fish_close.wav"></audio>
+
+    <audio id="starfishYay"         src="sounds/starfish_Yay.wav"></audio>
+    <audio id="jellyfishZap"        src="sounds/jellyfish_Zap.wav"></audio> 
+   
+    <div id="fishContainer">
+        <div class="circle"><img src="images/fish1_close.png" alt="Fish1"></div>
+        <div class="circle"><img src="images/fish2_open.png" alt="Fish2"></div>
+        <div class="circle"><img src="images/fish3_close.png" alt="Fish3"></div>
+        <div class="circle"><img src="images/fish4_open.png" alt="Fish4"></div>
+        <div class="circle"><img src="images/fish5_close.png" alt="Fish5"></div>
+        <div class="circle"><img src="images/fish6_open.png" alt="Fish6"></div>
+        <div class="circle"><img src="images/jellyfish.png" alt="Fish7"></div>
+        <div class="circle"><img src="images/fish4_open.png" alt="Fish8"></div>
+        <div class="circle"><img src="images/fish1_open.png" alt="Fish9"></div>
+        <div class="circle"><img src="images/fish2_open.png" alt="Fish10"></div>
+        <div class="circle"><img src="images/fish1_close.png" alt="Fish11"></div>
+        <div class="circle"><img src="images/starfish.png" alt="Fish12"></div>
+        <div class="circle"><img src="images/fish2_close.png" alt="Fish13"></div>
+        <div class="circle"><img src="images/fish3_open.png" alt="Fish14"></div>
+        <div class="circle"><img src="images/fish4_close.png" alt="Fish15"></div>
+        <div class="circle"><img src="images/fish5_open.png" alt="Fish16"></div>
+        <div class="circle"><img src="images/fish6_close.png" alt="Fish17"></div>
+        <div class="circle"><img src="images/fish3_open.png" alt="Fish18"></div>
+        <div class="circle"><img src="images/starfish.png" alt="Fish19"></div>
+        <div class="circle"><img src="images/fish5_close.png" alt="Fish20"></div>
+        <div class="circle"><img src="images/fish1_close.png" alt="Fish21"></div>
+        <div class="circle"><img src="images/fish3_open.png" alt="Fish22"></div>
+        <div class="circle"><img src="images/fish5_close.png" alt="Fish23"></div>
+        <div class="circle"><img src="images/jellyfish.png" alt="Fish24"></div>
+        <!-- <div class="circle"><img src="images/fish4_open.png" alt="Fish25"></div> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+/* +++++++++++++ */
+/* FOR ADJUSTING CSS GAME ELEMENTS */
+/* +++++++++++++ */
+
+/* Score and timer styles */
+#details, #score, #timer {
+    font-size: 15px;
+}
+
+#details {
+    margin-bottom: 32px;
+}
+
+/* Game ended message styles */
+#gameEndedMessage {
+    font-size: 16px;
+    color: greenyellow;
+}
+
+/* Fish container styles */
+#fishContainer {
+
+    display: grid;
+
+    grid-gap: 20px;
+    /*  vertical gap between circles  */
+
+    grid-template-columns: repeat(6, minmax(50px, 0.50fr));
+    /* Grid */
+
+    justify-content: center; 
+    /* Horizontally centers the element */
+    align-items: center;     
+    /* Vertically centers the element */
+
+    padding: 0;
+
+    /*    margin-left: 195px ; */
+    /*    margin-right: 120px ;*/
+    /* Margin */
+
+    width: 52%; 
+    /* Adjust width as needed */
+    margin: auto; 
+    /* Centers the element horizontally, do not add other margins please */
+
+    position: relative;
+    /*    top: 50%;
+    left: 50%;*/
+    /*    transform: translate(-50%, -50%);*/
+
+    /*    align-content: center;*/
+    /* Ensure circles fit within the grid */
+}
+
+/* Edits the actual circle styles */
+.circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    position: relative;
+    border: 4px solid transparent;
+    transition: border-color 0.3s;
+}
+
+/* Edits the fish images within the circles */
+.circle img {
+    max-width: 105%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Highlight circle on hover */
+.circle:hover {
+    border-color: #800080;
+    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctext x="0" y="20" font-family="Arial" font-size="20"%3E🎣%3C/text%3E%3C/svg%3E'), auto;
+}
+
+/* Red border for closed mouth fish */
+.circle.closed-mouth {
+    border-color: #ff0000;
+}
+
+/* Green border for opened mouth fish */
+.circle.open-mouth {
+    border-color: #00ff00;
+}
+
+/* Grayed-out styling for clicked fish images */
+.clicked {
+    filter: grayscale(100%);
+    pointer-events: none;
+}
