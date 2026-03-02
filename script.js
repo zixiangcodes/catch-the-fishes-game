@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const sfx = new Audio(src);
         sfx.volume = base.volume;
         sfx.playbackRate = base.playbackRate;
-        sfx.play().catch(() => {});
+        sfx.play().catch(() => { });
     }
 
     // Get references to various buttons and elements on the page
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, 1000);
 
-         // Change objects (fish, jellyfish, and starfish) randomly every 4 seconds
+        // Change objects (fish, jellyfish, and starfish) randomly every 4 seconds
         objectChangeInterval = setInterval(changeObjects, 4000); // Assign the interval to objectChangeInterval
         changeObjects(); // Immediately change objects for the first time
     }
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function endGame() {
         intervalScore = 0; // Reset intervalScore to 0 when the game ends
 
-         // Clear the interval to stop changing objects
+        // Clear the interval to stop changing objects
         clearInterval(objectChangeInterval);
 
         // Stop background music
@@ -329,7 +329,10 @@ document.addEventListener('DOMContentLoaded', function () {
         fish1Count = 0;
         starfishCount = 0;
         jellyfishCount = 0;
-        intervalScore = 0; 
+        intervalScore = 0;
+
+        // Reset score breakdown
+        updateScoreBreakdown();
 
         // Clear the interval to stop changing objects
         clearInterval(objectChangeInterval);
